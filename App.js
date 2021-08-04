@@ -35,6 +35,8 @@ import {primaryColor, secondaryColor, white, darkGrey, grey} from './styles';
 
 import Jobs from './components/Jobs';
 import Sites from './components/Sites';
+import Quotes from './components/Quotes';
+import Assets from './components/Assets';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
@@ -49,22 +51,46 @@ const Tabs = () => (
       inactiveTintColor: grey,
     }}>
     <Tab.Screen
-      name="Jobs"
-      component={Jobs}
-      options={{
-        tabBarLabel: 'Jobs',
-        tabBarIcon: ({color, size}) => (
-          <MaterialCommunityIcons name="home" color={color} size={size} />
-        ),
-      }}
-    />
-    <Tab.Screen
       name="Sites"
       component={Sites}
       options={{
         tabBarLabel: 'Sites',
         tabBarIcon: ({color, size}) => (
-          <MaterialCommunityIcons name="home" color={color} size={size} />
+          <MaterialCommunityIcons
+            name="office-building"
+            color={color}
+            size={size}
+          />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="Jobs"
+      component={Jobs}
+      options={{
+        tabBarLabel: 'Jobs',
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="briefcase" color={color} size={size} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="Quotes"
+      component={Quotes}
+      options={{
+        tabBarLabel: 'Quotes',
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="calculator" color={color} size={size} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="Assets"
+      component={Assets}
+      options={{
+        tabBarLabel: 'Assets',
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="cube" color={color} size={size} />
         ),
       }}
     />
